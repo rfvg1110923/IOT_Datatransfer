@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
 
 
     <ImageView
@@ -18,18 +19,22 @@
         android:id="@+id/tvID"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:fontFamily="sans-serif-black"
         android:text="器材編號"
         android:textSize="20sp" />
 
     <Spinner
         android:id="@+id/spID"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="match_parent"
         android:layout_height="30dp"
+        android:fontFamily="sans-serif-black"
         android:text="器材資訊"
         android:textSize="20sp" />
 
@@ -37,7 +42,9 @@
     <TextView
         android:id="@+id/tvuuid"
         android:layout_width="match_parent"
-        android:layout_height="40dp" />
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif-black"
+        android:paddingLeft="7dp" />
 
 
     <LinearLayout
@@ -49,18 +56,43 @@
             android:id="@+id/tvrssi"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_weight="0.25" />
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="7dp" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="7dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
             android:id="@+id/tvmajor"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_weight="0.25" />
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="7dp" />
+
         <TextView
             android:id="@+id/tvminor"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_weight="0.25" />
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="7dp" />
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -81,8 +113,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:insetLeft="140dp"
+            android:insetLeft="115dp"
             android:text="Map" />
-    </LinearLayout>>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="55dp"
+        android:gravity="center"
+        android:textSize="24sp" />
 
 </LinearLayout>
